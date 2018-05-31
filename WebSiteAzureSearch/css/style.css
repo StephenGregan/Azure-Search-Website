@@ -40,7 +40,8 @@ body {
     top: 0;
     left: 0;
     /*background-color: orangered;*/
-    background: linear-gradient(to bottom right, #2f869e, #8cd8ed);
+    /*background: linear-gradient(to bottom right, #2f869e, #8cd8ed);*/
+    background: linear-gradient(to bottom right, #8cd8ed, #2f869e);
     opacity: .8;
     overflow-x: hidden;
     padding-top: 60px;
@@ -48,12 +49,14 @@ body {
 }
 
     .side-nav a {
+        
         padding: 10px 10px 10px 30px;
         text-decoration: none;
         font-size: 22px;
         color: #ccc;
         display: block;
         transition: 0.3s;
+        color:black;
     }
 
         .side-nav a: hover {

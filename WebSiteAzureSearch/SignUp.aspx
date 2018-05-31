@@ -133,13 +133,75 @@ form.example::after {
   color: #2690d4;
   text-decoration: none;
 }
-  /*#footer {
-   /*position:absolute;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-   /*background:#6cf;*/*/
-}*/
+ body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
 </style>
 	</head>
 	<body>
@@ -188,20 +250,33 @@ form.example::after {
 		</div>
 		
 		<div id="main">
-		 <form id="form1" runat="server">
-        <div>
-            <p>Sign up Page</p>
-        </div>
-    </form>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tellus mauris, tristique non neque non, consectetur rhoncus ligula. Morbi tincidunt est a viverra eleifend. Cras non elit sit amet tortor consectetur dapibus. Ut luctus metus nulla, vitae mollis nunc luctus nec. Sed sodales, libero sed aliquet vestibulum, lacus diam congue mauris, a scelerisque magna lacus vitae elit. Vivamus varius pharetra felis eget fringilla. Pellentesque et dolor vel urna dictum iaculis. 
-In non nulla eu mi pellentesque bibendum. Suspendisse potenti. Donec massa nisi, consequat et nulla id, finibus fermentum mauris. Morbi molestie, tellus id facilisis vulputate, erat nulla ullamcorper magna, eget efficitur ante nisl non arcu. Proin auctor, sapien nec luctus porttitor, sem velit porta nulla, ut vehicula enim neque ac dolor. Integer finibus ut orci et lobortis. Mauris faucibus at nunc in luctus. Morbi a pharetra odio. Vivamus finibus laoreet pellentesque. 
-Pellentesque auctor lectus tortor, vitae fringilla dolor faucibus sit amet. Sed lacinia enim eu pulvinar tincidunt. Donec laoreet leo felis, quis ultrices purus lacinia aliquam. Ut convallis finibus neque eget maximus. Vestibulum interdum convallis pellentesque. In tincidunt nisi dui, et rutrum lacus vestibulum quis. Proin ac est imperdiet, sagittis purus feugiat, interdum ligula. Suspendisse vel ante id neque ornare pretium non ut massa. 
-Donec feugiat libero vel quam iaculis, vel finibus nisl lobortis. Maecenas malesuada vulputate velit eget tempor. Nunc hendrerit vehicula felis quis interdum. Proin viverra lectus ut ipsum bibendum, sit amet venenatis diam ornare. Nunc tristique interdum purus, at dignissim lectus sollicitudin id. Praesent convallis risus ut malesuada congue. Fusce ac velit congue, imperdiet lorem nec, egestas sem. Sed bibendum risus nulla, sit amet eleifend nunc luctus sit amet. Aliquam erat volutpat. Quisque placerat volutpat porttitor. Nulla aliquam nunc ac ligula sollicitudin finibus. Fusce interdum lectus at porttitor euismod. Ut ac sollicitudin quam. Sed non est quis ligula congue rhoncus. 
-Aliquam vel orci non augue dapibus pellentesque faucibus suscipit metus. Vestibulum accumsan arcu quis lacus convallis, sed pharetra dolor tristique. Curabitur egestas nunc non velit convallis pretium. Morbi tempor tempor orci ac tempus. Praesent auctor eros eget feugiat scelerisque. In ornare fermentum nisi sed semper. Vivamus vel enim at est sodales tincidunt. Nullam at consectetur ante. Praesent volutpat auctor libero. Ut eu rhoncus quam, vel efficitur leo. Fusce felis augue, pulvinar nec feugiat quis, dignissim sed eros. Proin facilisis sem nibh, id egestas purus posuere sit amet. Maecenas consectetur eget justo non tristique. Praesent rhoncus, quam sit amet commodo hendrerit, metus urna hendrerit mi, ac faucibus nibh tellus ac quam. Praesent feugiat facilisis finibus. Donec gravida suscipit efficitur. 
-Generated 5 paragraphs, 421 words, 2896 bytes of Lorem Ipsum
-</p>
+		<form action="/action_page.php" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
 
-		</div>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
 
        <%-- <div id ="footer">
             <ul class="footer-links">
