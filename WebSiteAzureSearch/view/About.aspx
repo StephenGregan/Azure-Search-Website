@@ -93,24 +93,9 @@ form.example::after {
 
     }
 
-   #footer {
+    #footer {
     position:fixed;
     bottom:0;
-}
-         /* Footer css */
-#main-footer {
-    width: 100%;
-   position:absolute;
-    bottom:0;
-  padding: 2em;
- background: linear-gradient(to bottom right, #2f869e, #8cd8ed);
-  color: #fff;
-  text-align: center;
-}
-
-#main-footer a {
-  color: #2690d4;
-  text-decoration: none;
 }
   /*#footer {
    /*position:absolute;
@@ -150,7 +135,6 @@ form.example::after {
 				<li><a href="http://localhost:56548/Services.aspx#">Services</a></li>
 				<li><a href="http://localhost:56548/Contact.aspx#">Contact</a></li>
                 <li><a href="http://localhost:56548/Login.aspx">Login</a></li>
-                <li><a href="http://localhost:56548/SignUp.aspx">Sign Up</a></li>
 			</ul>
 		</nav>
 		
@@ -162,7 +146,6 @@ form.example::after {
 			<a href="http://localhost:56548/Services.aspx#">Services</a>
 			<a href="http://localhost:56548/Contact.aspx#">Contact</a>
             <a href="http://localhost:56548/Login.aspx#">Login</a>
-            <a href="http://localhost:56548/SignUp.aspx">Sign Up</a>
 
 		</div>
 		
@@ -195,19 +178,15 @@ Azure Search boosts your development speed thanks to support for familiar tools 
 
 		</div>
 
-        <%--<div id ="footer">
+        <div id ="footer">
             <ul class="footer-links">
                 <li><a href="https://azure.microsoft.com/blog/">Blog</a></li>
                 <li><a href="https://twitter.com/search?src=typd&q=%23azuresearch">Twitter</a></li>
                 <li><a href="http://aka.ms/azuresearchforum">Forum</a></li>
             </ul>
             
-        </div>--%>
-		 <footer id="main-footer" class="grid">
-  <div>My Site &copy; 2017 </div>
-  <div>Project By <a href="http://mysite.com
-      " target="_blank">My Site</a></div>
-</footer>
+        </div>
+		
 		<script>
 			function openSlideMenu() {
 				document.getElementById("side-menu").style.width = "250px";

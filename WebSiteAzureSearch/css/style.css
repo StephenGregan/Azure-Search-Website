@@ -5,7 +5,8 @@ body {
 }
 
 .navbar {
-    background-color: #e3d3ac;
+    /*background-color: #e3d3ac;*/
+    background: linear-gradient(to bottom right, #8cd8ed, #2f869e);
     overflow: hidden;
     height: 63px;
 }
@@ -38,7 +39,8 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #5aa1a3;
+    /*background-color: orangered;*/
+    background: linear-gradient(to bottom right, #2f869e, #8cd8ed);
     opacity: .8;
     overflow-x: hidden;
     padding-top: 60px;
