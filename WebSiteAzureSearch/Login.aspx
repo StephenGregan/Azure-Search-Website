@@ -136,10 +136,6 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
-
-<h2>Responsive Social Login Form</h2>
-<p>Resize the browser window to see the responsive effect. When the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other.</p>
-
 <div class="container">
   <form action="/action_page.php">
     <div class="row">
@@ -162,7 +158,7 @@ input[type=submit]:hover {
 
       <div class="col">
         <div class="hide-md-lg">
-          <p>Or sign in manually:</p>
+          <%--<p>Or sign in manually:</p>--%>
         </div>
 
         <input type="text" name="username" placeholder="Username" required>

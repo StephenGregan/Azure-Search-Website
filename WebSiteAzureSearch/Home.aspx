@@ -53,9 +53,16 @@ form.example::after {
 }
 
     #main {
-        width: 85%;
+        width: 88%;
 
     }
+  #footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
+}
 </style>
 	</head>
 	<body>
@@ -109,6 +116,15 @@ form.example::after {
             </form>
 
 		</div>
+
+        <div id ="footer">
+            <ul class="footer-links">
+                <li><a href="https://azure.microsoft.com/blog/">Blog</a></li>
+                <li><a href="https://twitter.com/search?src=typd&q=%23azuresearch">Twitter</a></li>
+                <li><a href="http://aka.ms/azuresearchforum">Forum</a></li>
+            </ul>
+            
+        </div>
 		
 		<script>
 			function openSlideMenu() {
